@@ -1,7 +1,7 @@
 // Initialize EmailJS with your user ID
 emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID);
 
-// Handle form submission
+
 document.getElementById('contact-form').addEventListener('submit', function (event) {
   event.preventDefault();
 
@@ -12,23 +12,12 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 
   // Basic validation
   if (!name || !email || !message) {
-    Swal.fire({
-      icon: 'warning',
-      title: 'All fields are required!',
-      text: 'Please fill in all the fields before submitting.',
-    });
+    toastr.warning('Please fill in all the fields before submitting.');
     return;
   }
 
-  // Display loading popup
-  Swal.fire({
-    title: 'Sending...',
-    text: 'Please wait while your message is being sent.',
-    allowOutsideClick: false,
-    didOpen: () => {
-      Swal.showLoading(); // Show loading spinner
-    },
-  });
+  // Display loading popup (Toastr does not support loading spinners)
+  toastr.info('Sending... Please wait while your message is being sent.');
 
   // Use the EmailJS send function
   emailjs
@@ -43,20 +32,11 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     )
     .then(
       function (response) {
-        Swal.fire({
-          icon: 'success',
-          title: 'Message Sent!',
-          text: 'Your message has been sent successfullyyyyy.',
-          showConfirmButton: true,
-        });
+        toastr.success('Your message has been sent successfully!');
         document.getElementById('contact-form').reset(); // Reset form
       },
       function (error) {
-        Swal.fire({
-          icon: 'error',
-          title: 'Failed to Send',
-          text: 'Something went wrong. Please try again later.',
-        });
+        toastr.error('Something went wrong. Please try again later.');
       }
     );
 });
