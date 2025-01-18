@@ -1,5 +1,5 @@
 // Initialize EmailJS with your user ID
-emailjs.init(process.env.EMAILJS_USER_ID);
+emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID);
 
 // Handle form submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -12,8 +12,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
   // Use the EmailJS send function
   emailjs.send(
-    process.env.EMAILJS_SERVICE_ID, 
-    process.env.EMAILJS_TEMPLATE_ID, 
+    process.env.REACT_APP_EMAILJS_SERVICE_ID, 
+    process.env.REACT_APP_EMAILJS_TEMPLATE_ID, 
     {
       name: name,
       email: email,
