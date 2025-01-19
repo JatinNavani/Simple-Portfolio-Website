@@ -1,30 +1,62 @@
-const userID = window.env.REACT_APP_EMAILJS_USER_ID;
-const serviceID = window.env.REACT_APP_EMAILJS_SERVICE_ID;
-const templateID = window.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+// Initialize EmailJS with your user ID
+emailjs.init('Ylhn27qHL-46IEbKc');
 
-// Initialize EmailJS with your user ID from the dynamically injected config.js
-emailjs.init(userID);
-
+// Handle form submission
 document.getElementById('contact-form').addEventListener('submit', function (event) {
   event.preventDefault();
 
+  // Collect form data
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
 
+  // Basic validation
+  if (!name || !email || !message) {
+    Swal.fire({
+      icon: 'warning',
+      title: 'All fields are required!',
+      text: 'Please fill in all the fields before submitting.',
+    });
+    return;
+  }
+
+  // Display loading popup
+  Swal.fire({
+    title: 'Sending...',
+    text: 'Please wait while your message is being sent.',
+    allowOutsideClick: false,
+    didOpen: () => {
+      Swal.showLoading(); // Show loading spinner
+    },
+  });
+
+  // Use the EmailJS send function
   emailjs
-    .send(serviceID, templateID, {
-      name: name,
-      email: email,
-      message: message,
-    })
+    .send(
+      'service_2ifzdte',
+      'template_d9exdoe',
+      {
+        name: name,
+        email: email,
+        message: message,
+      }
+    )
     .then(
       function (response) {
-        alert('Message sent successfully');
-        document.getElementById('contact-form').reset();
+        Swal.fire({
+          icon: 'success',
+          title: 'Message Sent!',
+          text: 'Your message has been sent successfully.',
+          showConfirmButton: true,
+        });
+        document.getElementById('contact-form').reset(); // Reset form
       },
       function (error) {
-        alert('Failed to send message');
+        Swal.fire({
+          icon: 'error',
+          title: 'Failed to Send',
+          text: 'Something went wrong. Please try again later.',
+        });
       }
     );
 });
