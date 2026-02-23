@@ -35,7 +35,40 @@
   margin: 20px 0;
   padding: 0 10px;
 }
+/* Experience header with logo */
+.exp-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
 
+.exp-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 7px;
+}
+
+.exp-title h3 {
+  margin: 0;
+}
+.exp-bullets{
+  margin: 0;
+  padding-left: 18px;
+}
+.exp-bullets li{
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.exp-subtitle {
+  margin-top: 4px;
+  color: #666;
+  font-size: 0.9rem;
+}
 /* Specific adjustment for the last (fifth) container */
 .skills-box:nth-child(5) {
   grid-column: span 2; /* Makes it span two columns */
@@ -50,7 +83,29 @@
   background-color: #f9f9f9;
   text-align: center;
 }
+/* Footer menu fix */
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
 
+.footer_menu_list a {
+  text-decoration: none;
+}
+
+/* Footer icons center fix */
+.footer-social-icons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
 /* Skills List */
 .skills-list {
   display: flex;
@@ -152,6 +207,10 @@
                 </li>
                 <li class="nav_list">
                     <a href="#projects" class="nav-link">Projects</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#experience" class="nav-link">Experience</a>
                     <div class="circle"></div>
                 </li>
                 <li class="nav_list">
@@ -303,7 +362,7 @@
        <!-- -------------- PROJECT BOX ---------------- -->
 
        <!-- ----- PROJECTS SECTION ----- -->
-        <section class="section", id="projects">
+        <section class="section" id="projects">
             <div class="top-header">
                 <h1>My Projects</h1>
                 <span>Check out some of the work I have done</span>
@@ -344,7 +403,7 @@
                 <!-- Project 3: KisanSevak (Group Project) -->
                 <div class="project-box">
                     <i class="fas fa-leaf"></i> <!-- Leaf Icon -->
-                    <h3>KisanSevak (Group Project)</h3>
+                    <h3>KisanSevak</h3>
                     <a href="https://github.com/JatinNavani" target="_blank" class="icon"><i class="uil uil-github-alt"></i></a>
                     <label>
                         <br><br>
@@ -357,8 +416,234 @@
                     <button class="research-paper-btn" onclick="window.open('https://jet-m.com/wp-content/uploads/129-JETM8261.pdf', '_blank')">Read Research Paper</button>
                     
                 </div>
+
+                <div class="project-box">
+                  <i class="fas fa-video"></i>
+                  <h3>Traffic Analytics using YOLOv8 (Zones + Live Dashboard)</h3>
+
+
+                  <div class="technologies">
+                    <br><br>
+                    Technologies: YOLOv8, Python, Flask, React, OpenCV, MJPEG/Streaming
+                  </div>
+
+                  <div class="description">
+                    Developed a traffic monitoring system that detects and tracks vehicles in video feeds using YOLOv8.
+                    Supports zone drawing, zone-based detections, live streaming to the frontend and analytics visualizations.
+                  </div>
+
+                </div>
+                <div class="project-box">
+                  <i class="fas fa-coins"></i>
+                  <h3>ProfitCompare – Investment Comparison & Advisory App</h3>
+
+                  <a href="https://github.com/JatinNavani/Profit-Compare" target="_blank" class="icon">
+                    <i class="uil uil-github-alt"></i>
+                  </a>
+
+                  <div class="technologies">
+                    <br><br>
+                    Technologies: Flutter, APIs, Local Storage (SQLite/sqflite), Data Visualizations
+                  </div>
+
+                  <div class="description">
+                    Built an investment comparison app to evaluate Stocks, ETFs, Mutual Funds, Bonds & FDs using returns, risk and liquidity.
+                    Includes scenario simulation, risk-tolerance based asset allocation and a personalized insights workflow.
+                  </div>
+
+                </div>
+                  <div class="project-box">
+                    <i class="fas fa-shield-halved"></i>
+                    <h3>DDoS Attack Simulation (GNS3 + Virtual Machines)</h3>
+
+                    <a href="https://github.com/nitikanagdevani/DDoS-Attack-Simulation-" target="_blank" class="icon">
+                      <i class="uil uil-github-alt"></i>
+                    </a>
+
+                    <div class="technologies">
+                      <br><br>
+                      Technologies: GNS3, Kali Linux, Ubuntu Server, Python, Networking (SYN Flood)
+                    </div>
+
+                    <div class="description">
+                      Simulated a distributed SYN flood DDoS attack using a command-and-control server and bots.
+                      Built an attacker–victim–legitimate user setup using VMs, and analyzed impact on availability and traffic behavior.
+                    </div>
+
+                    <button class="research-paper-btn" onclick="window.open('https://github.com/nitikanagdevani/DDoS-Attack-Simulation-/blob/main/Cookbook.pdf', '_blank')">
+                      View Doc
+                    </button>
+                  </div>
+                  <div class="project-box">
+                    <i class="fas fa-check-to-slot"></i>
+                    <h3>Blockchain-based Secure Voting System</h3>
+
+                    <a href="https://github.com/JatinNavani/Blockchain-for-Voting-VESIT-D17B-34" target="_blank" class="icon">
+                      <i class="uil uil-github-alt"></i>
+                    </a>
+
+                    <div class="technologies">
+                      <br><br>
+                      Technologies: Blockchain, Smart Contracts (Solidity), Web App, Cryptography
+                    </div>
+
+                    <div class="description">
+                      Designed a tamper-resistant voting system using blockchain for transparency and auditability.
+                      Implemented vote immutability, one-vote-per-user constraints and verifiable counting.
+                    </div>
+
+                  </div>
             </div>
+  
         </section>
+
+<section class="section" id="experience">
+  <div class="top-header">
+    <h1>Professional Experience</h1>
+    <span>Industry Experience & Internships</span>
+  </div>
+
+  <div class="project-container">
+
+    <!-- EY -->
+    <div class="project-box">
+      <div class="exp-header">
+        <a href="https://www.ey.com/" target="_blank" rel="noopener noreferrer">
+          <img class="exp-logo"
+               src="https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Company+Logos/ey.png"
+               alt="EY Logo" loading="lazy">
+        </a>
+
+        <div class="exp-title">
+          <h3>AI/ML Intern – Ernst & Young (EY)</h3>
+          <div class="exp-subtitle">Dec 2025 – Feb 2026 | CNS – Risk – Process & Controls | Mumbai</div>
+        </div>
+      </div>
+
+      <div class="description">
+        <ul class="exp-bullets">
+          <li>Worked on “Symphony AI Integration” within EY’s Business Consulting – Risk practice.</li>
+          <li>Built Python pipelines to generate & validate large-scale synthetic financial exception data for analytics prototyping.</li>
+          <li>Developed a GenAI-driven risk analytics assistant using Gemini API + structured prompt engineering across 33+ KRIs.</li>
+          <li>Implemented dynamic schema parsing, context construction, and enterprise-ready integration to support exception investigation workflows.</li>
+          <li>Focused on scalability, accuracy, and deployment readiness in an enterprise risk environment.</li>
+        </ul>
+      </div>
+
+      <button class="research-paper-btn"
+        onclick="window.open('https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Certificates/EY_Internship-Certificate.pdf', '_blank')">
+        View Certificate
+      </button>
+    </div>
+
+    <!-- AlgoGreek -->
+    <div class="project-box">
+      <div class="exp-header">
+        <a href="https://www.algogreek.com/" target="_blank" rel="noopener noreferrer">
+          <img class="exp-logo"
+               src="https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Company+Logos/algogreek.png"
+               alt="AlgoGreek Logo" loading="lazy">
+        </a>
+
+        <div class="exp-title">
+          <h3>Data Engineering Intern – AlgoGreek</h3>
+          <div class="exp-subtitle">May 2025 – July 2025 | Remote</div>
+        </div>
+      </div>
+
+      <div class="description">
+        Migrated legacy HDF5 storage pipelines to Apache Parquet with direct integration to Amazon S3 for faster analytics workflows.
+        Built a Streamlit-based financial data visualizer to improve exploratory analysis for strategy research.
+        Automated scheduled SQL pipelines and contributed to backtesting workflows.
+      </div>
+
+      <button class="research-paper-btn"
+        onclick="window.open('https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Certificates/AlgoGreek_Internship_certificate.pdf', '_blank')">
+        View Certificate
+      </button>
+    </div>
+
+    <!-- Panache -->
+    <div class="project-box">
+      <div class="exp-header">
+        <a href="https://www.panachedigilife.com/"  target="_blank" rel="noopener noreferrer">
+          <img class="exp-logo"
+               src="https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Company+Logos/panache.png"
+               alt="Panache DigiLife Logo" loading="lazy">
+        </a>
+
+        <div class="exp-title">
+          <h3>Intern – Panache DigiLife Limited</h3>
+          <div class="exp-subtitle">March 2025 – October 2025 | Remote</div>
+        </div>
+      </div>
+
+      <div class="description">
+        Contributed to an AI-based traffic analysis project using computer vision.
+        Assisted with backend pipelines for video analytics and model testing workflows for vehicle detection in Indian traffic environments.
+      </div>
+
+      <button class="research-paper-btn"
+        onclick="window.open('https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Certificates/jatin panache internship certificate.pdf', '_blank')">
+        View Certificate
+      </button>
+    </div>
+
+    <!-- Cambay -->
+    <div class="project-box">
+      <div class="exp-header">
+        <a href="https://www.cambaycs.com/" target="_blank" rel="noopener noreferrer">
+          <img class="exp-logo"
+               src="https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Company+Logos/cambay.jpg"
+               alt="Cambay Consulting Logo" loading="lazy">
+        </a>
+
+        <div class="exp-title">
+          <h3>Software Developer Intern – Cambay Consulting LLC</h3>
+          <div class="exp-subtitle">May 2024 – July 2024 | Remote</div>
+        </div>
+      </div>
+
+      <div class="description">
+        Designed and integrated RESTful APIs using Spring Boot within a microservices architecture.
+        Fixed production-level bugs and improved stability across multiple Spring Boot services.
+        Implemented SQLite-based local data storage and contributed to performance optimization.
+      </div>
+
+      <button class="research-paper-btn"
+        onclick="window.open('https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Certificates/Cambay Internship Completion letter.pdf', '_blank')">
+        View Certificate
+      </button>
+    </div>
+
+    <!-- Viral -->
+    <div class="project-box">
+      <div class="exp-header">
+        <a href="https://www.viraltech.in/" target="_blank" rel="noopener noreferrer">
+          <img class="exp-logo"
+               src="https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Company+Logos/viral.jpg"
+               alt="Viral Technologies Logo" loading="lazy">
+        </a>
+
+        <div class="exp-title">
+          <h3>Software Developer Intern – Viral Technologies Pvt Ltd</h3>
+          <div class="exp-subtitle">Nov 2023 – Dec 2023 | Mumbai</div>
+        </div>
+      </div>
+
+      <div class="description">
+        Developed a Restaurant Menu Management System using Spring Boot and basic database integration.
+        Completed structured training in Python and backend development fundamentals.
+      </div>
+
+      <button class="research-paper-btn"
+        onclick="window.open('https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Certificates/Jatin+Navani_Internship_ViralTechnologies+Completion+Letter.pdf', '_blank')">
+        View Certificate
+      </button>
+    </div>
+
+  </div>
+</section>
 
         <!-- Blogs Section -->
 <section class="blogs-section" id="blogs">
@@ -460,27 +745,19 @@
     <!-- --------------- FOOTER --------------- -->
     <footer>
         <div class="top-footer">
-            <p>Jatin Navani .</p>
+            <p>Jatin Navani</p>
         </div>
         <div class="middle-footer">
+            <div class="middle-footer">
             <ul class="footer-menu">
-                <li class="footer_menu_list">
-                    <a href="#home">Home</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#about">About</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#projects">Projects</a>
-                </li>
-                <li class="footer_menu_list">
-                  <a href="#blogs">Articles</a>
-              </li>
-                <li class="footer_menu_list">
-                    <a href="#contact">Contact</a>
-                </li>
+              <li class="footer_menu_list"><a href="#home">Home</a></li>
+              <li class="footer_menu_list"><a href="#about">About</a></li>
+              <li class="footer_menu_list"><a href="#projects">Projects</a></li>
+              <li class="footer_menu_list"><a href="#experience">Experience</a></li>
+              <li class="footer_menu_list"><a href="#blogs">Articles</a></li>
+              <li class="footer_menu_list"><a href="#contact">Contact</a></li>
             </ul>
-        </div>
+            </div>
         <div class="footer-social-icons">
             <a href="https://www.instagram.com/jatin_navani/" target="_blank" class="icon"><i class="uil uil-instagram"></i></a>
             <a href="https://www.linkedin.com/in/jatinnavani/" target="_blank" class="icon"><i class="uil uil-linkedin-alt"></i></a>
