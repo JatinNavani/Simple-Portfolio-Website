@@ -83,6 +83,38 @@
   background-color: #f9f9f9;
   text-align: center;
 }
+
+/* ===== MacroTerminal link alignment fix ===== */
+.project-box.macroterminal-box{
+  position: relative;
+}
+
+/* pin the icons to top-right */
+.project-box.macroterminal-box .project-links{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  display: flex;
+  gap: 10px;
+
+  z-index: 5;
+}
+
+/* make sure icons look clickable */
+.project-box.macroterminal-box .project-links a{
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-box.macroterminal-box .project-links a:hover{
+  transform: scale(1.12);
+  transition: 0.15s ease;
+}
 /* Footer menu fix */
 .footer-menu {
   list-style: none;
@@ -368,6 +400,41 @@
                 <span>Check out some of the work I have done</span>
             </div>
             <div class="project-container">
+
+            <!-- ===== Project 0: MacroTerminal (FIRST) ===== -->
+            <div class="project-box macroterminal-box">
+
+              <div class="project-links">
+                <a href="https://github.com/JatinNavani/MacroTerminal" target="_blank" rel="noopener noreferrer" title="GitHub">
+                  <i class="uil uil-github-alt"></i>
+                </a>
+
+                <!-- remove this if you don't have a live link yet -->
+                <a href="https://jatinnavani-macroterminal.streamlit.app/" target="_blank" rel="noopener noreferrer" title="Live Demo">
+                  <i class="uil uil-external-link-alt"></i>
+                </a>
+              </div>
+
+              <i class="uil uil-globe"></i>
+              <h3>MacroTerminal — Global + India Macro Dashboard</h3>
+
+              <div class="technologies">
+                <br><br>
+                Technologies: Python, Streamlit, Financial APIs, Regime Classification, Macro Analytics
+              </div>
+
+              <div class="description">
+                Built a terminal-style macroeconomic intelligence dashboard covering US and India markets.
+                Includes inflation tracking, yield curve analysis, risk regimes, stress testing scenarios,
+                auto-generated macro insights and threshold-based alerts for cross-asset monitoring.
+              </div>
+
+              <button class="research-paper-btn"
+                onclick="window.open('https://jatinnavani-macroterminal.streamlit.app/', '_blank')">
+                Checkout Project
+              </button>
+
+            </div>
                 <div class="project-box">
                     <i class="fas fa-chart-line"></i> <!-- Replace with your icon -->
                     <h3>Financial Market Prediction and Trading Strategy</h3>
