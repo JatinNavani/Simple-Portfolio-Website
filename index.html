@@ -129,7 +129,149 @@
 .footer_menu_list a {
   text-decoration: none;
 }
+/* Certifications Section */
+.certifications-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
 
+.certification-box {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 24px 22px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.certification-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.certification-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.certification-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #333;
+  flex-shrink: 0;
+}
+
+.certification-title h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.certification-title p {
+  margin: 4px 0 0;
+  font-size: 0.92rem;
+  color: #666;
+}
+
+.certification-meta {
+  margin: 12px 0;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+.certification-desc {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.certification-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.certification-logo {
+  border-radius: 12px;
+  background: #f4f4f4;
+  border: 1px solid #ececec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.certification-logo img {
+  display: block;
+  object-fit: contain;
+}
+
+/* AWS rectangular container */
+.certification-logo.aws-cert-logo {
+  width: 68px;
+  height: 44px;
+  border-radius: 10px;
+}
+
+.certification-logo.aws-cert-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CFA square container */
+.certification-logo.cfa-cert-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+}
+
+.certification-logo.cfa-cert-logo img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+.verify-btn,
+.credential-btn {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.verify-btn {
+  background: #eef2ff;
+  color: #3730a3;;
+}
+
+.verify-btn:hover {
+  opacity: 0.9;
+}
+
+.credential-btn {
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+.credential-btn:hover {
+  background: #e0e7ff;
+}
 /* Footer icons center fix */
 .footer-social-icons {
   width: 100%;
@@ -243,6 +385,10 @@
                 </li>
                 <li class="nav_list">
                     <a href="#experience" class="nav-link">Experience</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#certifications" class="nav-link">Certifications</a>
                     <div class="circle"></div>
                 </li>
                 <li class="nav_list">
@@ -712,6 +858,83 @@
   </div>
 </section>
 
+<section class="section" id="certifications">
+  <div class="top-header">
+    <h1>Certifications & Licenses</h1>
+    <span>Verified professional credentials and completed examinations</span>
+  </div>
+
+  <div class="certifications-container">
+
+    <!-- AWS CCP -->
+    <div class="certification-box">
+      <div class="certification-top">
+      <div class="certification-logo aws-cert-logo">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIrEos4bkxVDcQ5JyUHEJ-c6s92wZmdzxYPw&s"
+          alt="AWS Logo"
+          loading="lazy"
+        >
+      </div>
+        <div class="certification-title">
+          <h3>AWS Certified Cloud Practitioner</h3>
+          <p>Amazon Web Services (AWS)</p>
+        </div>
+      </div>
+
+      <div class="certification-meta">
+        <strong>Status:</strong> Completed<br>
+        <strong>Date:</strong> March 2026
+      </div>
+
+      <div class="certification-desc">
+        Validates foundational knowledge of cloud concepts, AWS core services, pricing, architecture, and security best practices.
+      </div>
+
+      <div class="certification-actions">
+        <button class="verify-btn"
+          onclick="window.open('https://www.credly.com/badges/7c3026a8-3b6d-43c4-8868-88667dae6ecc/public_url', '_blank')">
+          Verify Credential
+        </button>
+      </div>
+    </div>
+
+    <!-- CFA Level I -->
+    <div class="certification-box">
+      <div class="certification-top">
+      <div class="certification-logo cfa-cert-logo">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIi3ZSlSqTU9PL4po_LnE20-12NDMXmleGSw&s"
+          alt="CFA Institute Logo"
+          loading="lazy"
+        >
+      </div>
+        <div class="certification-title">
+          <h3>CFA Level I</h3>
+          <p>CFA Institute</p>
+        </div>
+      </div>
+
+      <div class="certification-meta">
+        <strong>Status:</strong> Passed<br>
+        <strong>Date:</strong> March 2026
+      </div>
+
+      <div class="certification-desc">
+        Demonstrates strong foundation in quantitative methods, financial reporting, economics, equity, fixed income, derivatives, portfolio management, and ethics.
+      </div>
+
+      <div class="certification-actions">
+        <button class="credential-btn"
+          onclick="window.open('https://credentials.cfainstitute.org/2da65a7e-5c45-4123-843f-e2cd79bf5925', '_blank')">
+          View Credential
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
         <!-- Blogs Section -->
 <section class="blogs-section" id="blogs">
   <h2>My Articles</h2>
@@ -821,6 +1044,7 @@
               <li class="footer_menu_list"><a href="#about">About</a></li>
               <li class="footer_menu_list"><a href="#projects">Projects</a></li>
               <li class="footer_menu_list"><a href="#experience">Experience</a></li>
+              <li class="footer_menu_list"><a href="#certifications">Certifications</a></li>
               <li class="footer_menu_list"><a href="#blogs">Articles</a></li>
               <li class="footer_menu_list"><a href="#contact">Contact</a></li>
             </ul>
