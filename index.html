@@ -53,6 +53,11 @@
   padding: 7px;
 }
 
+.exp-logo.exp-logo-wide {
+  width: 100px;
+  padding: 10px 12px;
+}
+
 .exp-title h3 {
   margin: 0;
 }
@@ -69,8 +74,8 @@
   color: #666;
   font-size: 0.9rem;
 }
-/* Specific adjustment for the last (fifth) container */
-.skills-box:nth-child(5) {
+/* Specific adjustment for the last container */
+.skills-box:last-child {
   grid-column: span 2; /* Makes it span two columns */
   justify-self: center; /* Center-align it horizontally */
 }
@@ -231,6 +236,20 @@
   object-fit: cover;
 }
 
+/* NISM wide wordmark container */
+.certification-logo.nism-cert-logo {
+  width: 80px;
+  height: 44px;
+  border-radius: 10px;
+}
+
+.certification-logo.nism-cert-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+}
+
 /* CFA square container */
 .certification-logo.cfa-cert-logo {
   width: 56px;
@@ -302,7 +321,7 @@
   .skills-container {
     grid-template-columns: 1fr; /* Stacks all boxes into one column */
   }
-  .skills-box:nth-child(5) {
+  .skills-box:last-child {
     grid-column: auto; /* Remove span on mobile */
   }
   .skills-list span {
@@ -402,7 +421,7 @@
             </ul>
         </div>
         <div class="nav-button">
-          <button class="btn" onclick="window.location.href='https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Jatin_Navani_Resume.pdf'">
+          <button class="btn" onclick="window.open('https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Jatin_Navani_Resume.pdf', '_blank')">
             Download CV <i class="uil uil-file-alt"></i>
         </button>
         
@@ -425,12 +444,12 @@
                 <p>I'm <span class="typedText"></span></p>
             </div>
             <div class="featured-text-info">
-                <p>Computer engineering student passionate about software development, AI, and quantitative finance, focused on creating innovative solutions.
+                <p>Quantitative Researcher focused on systematic equity strategies, alpha research, backtesting, and portfolio construction.
                 </p>
             </div>
             <div class="featured-text-btn">
               <button class="btn blue-btn" onclick="window.location.href='https://wa.me/918879887189'">Hire Me</button>
-              <button class="btn" onclick="window.location.href='https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Jatin_Navani_Resume.pdf'">Download CV <i class="uil uil-file-alt"></i></button>
+              <button class="btn" onclick="window.open('https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Jatin_Navani_Resume.pdf', '_blank')">Download CV <i class="uil uil-file-alt"></i></button>
             </div>
             <div class="social_icons">
                 <a href="https://www.instagram.com/jatin_navani/" target="_blank" class="icon"><i class="uil uil-instagram"></i></a>
@@ -462,9 +481,9 @@
         <div class="col">
             <div class="about-info">
                 <h3>My introduction</h3>
-                <p>I am a motivated fourth-year Computer Engineering student with a passion for AI, Data Science, and Quantitative Finance. Interested in financial market prediction, trading strategies, and data analysis, seeking a Quants Summer Intern role to apply technical expertise and gain industry experience.</p>
+                <p>I am a Quantitative Researcher with a strong foundation in AI, Data Science, and Quantitative Finance. I focus on systematic equity strategies, alpha research, backtesting, and research infrastructure, combining technical expertise with a CFA Level I background in financial analysis.</p>
                 <div class="about-btn">
-                  <button class="btn" onclick="window.location.href='https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Jatin_Navani_Resume.pdf'">
+                  <button class="btn" onclick="window.open('https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Jatin_Navani_Resume.pdf', '_blank')">
                       Download CV <i class="uil uil-import"></i>
                   </button>
               </div>              
@@ -507,8 +526,11 @@
                 <span>Artificial Intelligence</span>
                 <span>LightGBM</span>
                 <span>TensorFlow</span>
+                <span>PyTorch</span>
+                <span>Transformers</span>
                 <span>NumPy</span>
                 <span>Pandas</span>
+                <span>Spark</span>
               </div>
             </div>
             <div class="skills-box">
@@ -523,16 +545,40 @@
             </div>
             <div class="skills-box">
               <div class="skills-header">
+                <h3>Systems & Cloud</h3>
+              </div>
+              <div class="skills-list">
+                <span>AWS</span>
+                <span>Cloud</span>
+                <span>Docker</span>
+                <span>Kafka</span>
+                <span>RabbitMQ</span>
+                <span>CI/CD</span>
+                <span>Sentry</span>
+              </div>
+            </div>
+            <div class="skills-box">
+              <div class="skills-header">
+                <h3>Quant & Tools</h3>
+              </div>
+              <div class="skills-list">
+                <span>Power BI</span>
+                <span>Tableau</span>
+                <span>Kite API</span>
+                <span>Dhan API</span>
+              </div>
+            </div>
+            <div class="skills-box">
+              <div class="skills-header">
                 <h3>Mobile & Other</h3>
               </div>
               <div class="skills-list">
                 <span>Android</span>
                 <span>C</span>
-                <span>AWS</span>
-                <span>Cloud</span>
               </div>
             </div>
           </div>
+        </div>
     </div>
 </section>
 
@@ -606,9 +652,9 @@
                     <a href="https://github.com/JatinNavani/PaperTrade_SpringBoot" target="_blank" class="icon"><i class="uil uil-github-alt"></i></a>
                     <label>
                         <br><br>
-                        <b>Technologies:</b> Java, Springboot, SQLLite, Android, Microservices
+                        <b>Technologies:</b> Java, Springboot, RabbitMQ, SQLLite, Android, Microservices
                         <br><br> <!-- Added line break for spacing -->
-                        This Android-based app allows users to trade equities and options virtually on Indian markets (NSE) with real-time prices. 
+                        This Android-based app allows users to trade equities and options virtually on Indian markets (NSE) with real-time prices integrated via the Zerodha Broker API.
                         It enables users to enhance and check their trading skills.
                     </label>
                 </div>
@@ -656,12 +702,12 @@
 
                   <div class="technologies">
                     <br><br>
-                    Technologies: Flutter, APIs, Local Storage (SQLite/sqflite), Data Visualizations
+                    Technologies: Flutter, Firebase, Gemini API, Data Visualizations
                   </div>
 
                   <div class="description">
                     Built an investment comparison app to evaluate Stocks, ETFs, Mutual Funds, Bonds & FDs using returns, risk and liquidity.
-                    Includes scenario simulation, risk-tolerance based asset allocation and a personalized insights workflow.
+                    Includes scenario simulation, risk-tolerance based asset allocation and Gemini-powered diversification recommendations.
                   </div>
 
                 </div>
@@ -717,6 +763,30 @@
   </div>
 
   <div class="project-container">
+
+    <!-- Stratzy / Raise Financial Services -->
+    <div class="project-box">
+      <div class="exp-header">
+        <a href="https://www.stratzy.in/" target="_blank" rel="noopener noreferrer">
+          <img class="exp-logo exp-logo-wide"
+               src="https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Company+Logos/stratzy.svg"
+               alt="Stratzy Logo" loading="lazy">
+        </a>
+
+        <div class="exp-title">
+          <h3>Quantitative Researcher – Raise Financial Services (Stratzy / DhanHQ)</h3>
+          <div class="exp-subtitle">June 2026 – Present | Mumbai</div>
+        </div>
+      </div>
+
+      <div class="description">
+        <ul class="exp-bullets">
+          <li>Built Python data pipelines and an NSE equity backtesting engine to process 10 years of minute-level data for 3,000+ securities, incorporating transaction costs, slippage, leverage, and risk controls.</li>
+          <li>Engineered and evaluated 900+ quantitative factors across momentum, volatility, liquidity, volume, and price action for systematic alpha research and trading-signal discovery.</li>
+          <li>Integrated an LLM-driven research workflow to convert market insights into executable strategies and large-scale backtests, while optimizing AWS-based execution, memory usage, and safeguards against look-ahead bias.</li>
+        </ul>
+      </div>
+    </div>
 
     <!-- EY -->
     <div class="project-box">
@@ -932,6 +1002,38 @@
       </div>
     </div>
 
+    <!-- NISM Certified Research Analyst -->
+    <div class="certification-box">
+      <div class="certification-top">
+      <div class="certification-logo nism-cert-logo">
+        <img
+          src="https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Company+Logos/nism.png"
+          alt="NISM Logo"
+          loading="lazy"
+        >
+      </div>
+        <div class="certification-title">
+          <h3>NISM Certified Research Analyst</h3>
+          <p>National Institute of Securities Markets (NISM)</p>
+        </div>
+      </div>
+
+      <div class="certification-meta">
+        <strong>Status:</strong> Certified
+      </div>
+
+      <div class="certification-desc">
+        Validates expertise in equity research, valuation methods, financial statement analysis, and regulatory standards for research analysts in Indian securities markets.
+      </div>
+
+      <div class="certification-actions">
+        <button class="credential-btn"
+          onclick="window.open('https://s3.ap-south-1.amazonaws.com/www.jatinnavani.in/assets/Certificates/NISM_RA_Certificate.pdf', '_blank')">
+          View Certificate
+        </button>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1038,7 +1140,6 @@
             <p>Jatin Navani</p>
         </div>
         <div class="middle-footer">
-            <div class="middle-footer">
             <ul class="footer-menu">
               <li class="footer_menu_list"><a href="#home">Home</a></li>
               <li class="footer_menu_list"><a href="#about">About</a></li>
@@ -1048,7 +1149,7 @@
               <li class="footer_menu_list"><a href="#blogs">Articles</a></li>
               <li class="footer_menu_list"><a href="#contact">Contact</a></li>
             </ul>
-            </div>
+        </div>
         <div class="footer-social-icons">
             <a href="https://www.instagram.com/jatin_navani/" target="_blank" class="icon"><i class="uil uil-instagram"></i></a>
             <a href="https://www.linkedin.com/in/jatinnavani/" target="_blank" class="icon"><i class="uil uil-linkedin-alt"></i></a>
